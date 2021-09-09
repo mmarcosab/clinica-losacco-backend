@@ -18,7 +18,8 @@ public class CommonPaciente implements Paciente {
     private PlanoSaude planoSaude;
     private List<Atendimento> historico;
 
-    public CommonPaciente(String nome, String cpf, String rg, LocalDate dataNascimento, Endereco endereco, PlanoSaude planoSaude, List<Atendimento> historico) {
+    public CommonPaciente(String nome, String cpf, String rg, LocalDate dataNascimento, Endereco endereco, PlanoSaude planoSaude, List<Atendimento> historico) throws Exception {
+        validar(nome, cpf, rg, dataNascimento, endereco, planoSaude, historico);
         this.nome = nome;
         this.cpf = cpf;
         this.rg = rg;
@@ -74,6 +75,27 @@ public class CommonPaciente implements Paciente {
                 ", planoSaude=" + planoSaude +
                 ", historico=" + historico +
                 '}';
+    }
+
+    private void validar(String nome, String cpf, String rg, LocalDate dataNascimento, Endereco endereco, PlanoSaude planoSaude, List<Atendimento> historico) throws Exception {
+        if(nome == null || nome.isEmpty()){
+            throw new Exception("nome invalido, preencher corretamente");
+        }
+        if(cpf == null || cpf.isEmpty()){
+            throw new Exception("cpf invalido, preencher corretamente");
+        }
+        if(rg == null || rg.isEmpty()){
+            throw new Exception("rg invalido, preencher corretamente");
+        }
+        if(endereco == null){
+            throw new Exception("endereco invalido, preencher corretamente");
+        }
+        if(planoSaude == null){
+            throw new Exception("plano saude invalido, preencher corretamente");
+        }
+        if(historico == null){
+            throw new Exception("historico invalido, preencher corretamente");
+        }
     }
 
 }

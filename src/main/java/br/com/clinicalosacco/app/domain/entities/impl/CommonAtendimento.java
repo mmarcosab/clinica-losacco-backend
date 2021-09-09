@@ -13,7 +13,8 @@ public class CommonAtendimento implements Atendimento {
     private Paciente paciente;
     private Medico medico;
 
-    public CommonAtendimento(String descricao, List<String> exames, Paciente paciente, Medico medico) {
+    public CommonAtendimento(String descricao, List<String> exames, Paciente paciente, Medico medico) throws Exception {
+        validar(descricao, paciente, medico);
         this.descricao = descricao;
         this.exames = exames;
         this.paciente = paciente;
@@ -48,6 +49,18 @@ public class CommonAtendimento implements Atendimento {
                 ", paciente=" + paciente +
                 ", medico=" + medico +
                 '}';
+    }
+
+    private void validar(String descricao, Paciente paciente, Medico medico) throws Exception {
+        if(descricao == null || descricao.isEmpty()){
+            throw new Exception("rua descricao, preencher corretamente");
+        }
+        if(paciente == null){
+            throw new Exception("paciente invalido, preencher corretamente");
+        }
+        if(medico == null){
+            throw new Exception("medico invalido, preencher corretamente");
+        }
     }
 
 }

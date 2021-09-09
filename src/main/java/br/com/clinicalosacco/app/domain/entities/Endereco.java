@@ -6,5 +6,5 @@ public interface Endereco {
     String getBairro();
     String getCidade();
     String getComplemento();
-    String getUF();
+    String getUf();
 }

@@ -5,5 +5,5 @@ public interface Medico {
     String getCpf();
     String getRg();
     String getCrm();
-    String getEndereco();
+    Endereco getEndereco();
 }
