@@ -53,7 +53,7 @@ public class CommonAtendimento implements Atendimento {
 
     private void validar(String descricao, Paciente paciente, Medico medico) throws Exception {
         if(descricao == null || descricao.isEmpty()){
-            throw new Exception("rua descricao, preencher corretamente");
+            throw new Exception("descricao invalida, preencher corretamente");
         }
         if(paciente == null){
             throw new Exception("paciente invalido, preencher corretamente");
