@@ -12,7 +12,7 @@ public class CommonEndereco implements Endereco {
     private String uf;
 
     public CommonEndereco(String rua, String numero, String cidade, String complemento, String bairro, String uf) throws Exception {
-        validar(rua, numero, cidade, complemento, bairro, uf);
+        validar(rua, numero, cidade, bairro, uf);
         this.rua = rua;
         this.numero = numero;
         this.cidade = cidade;
@@ -63,7 +63,7 @@ public class CommonEndereco implements Endereco {
                 '}';
     }
 
-    private void validar(String rua, String numero, String cidade, String complemento, String bairro, String uf) throws Exception {
+    private void validar(String rua, String numero, String cidade, String bairro, String uf) throws Exception {
         if(rua == null || rua.isEmpty()){
             throw new Exception("rua invalida, preencher corretamente");
         }
@@ -71,10 +71,7 @@ public class CommonEndereco implements Endereco {
             throw new Exception("numero invalido, preencher corretamente");
         }
         if(cidade == null || cidade.isEmpty()){
-            throw new Exception("cidade invalido, preencher corretamente");
-        }
-        if(complemento == null || complemento.isEmpty()){
-            throw new Exception("complemento invalido, preencher corretamente");
+            throw new Exception("cidade invalida, preencher corretamente");
         }
         if(bairro == null || bairro.isEmpty()){
             throw new Exception("bairro invalido, preencher corretamente");
