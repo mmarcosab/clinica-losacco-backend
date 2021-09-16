@@ -3,7 +3,9 @@ package br.com.clinicalosacco.app.domain.factories.impl;
 import br.com.clinicalosacco.app.domain.entities.Endereco;
 import br.com.clinicalosacco.app.domain.entities.impl.CommonEndereco;
 import br.com.clinicalosacco.app.domain.factories.EnderecoFactory;
+import org.springframework.stereotype.Service;
 
+@Service
 public class EnderecoFactoryImpl implements EnderecoFactory {
 
     @Override

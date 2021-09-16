@@ -3,6 +3,9 @@ package br.com.clinicalosacco.app.domain.entities;
 
 import br.com.clinicalosacco.app.domain.entities.impl.*;
 import static org.junit.jupiter.api.Assertions.*;
+
+import br.com.clinicalosacco.app.domain.entities.impl.CommonPlanoSaude;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -51,7 +54,6 @@ public class CommonAtendimentoTest {
         }
     }
 
-
     private CommonPaciente getPaciente() throws Exception {
         return new CommonPaciente("nome teste", "12345645678", "12345678", LocalDate.now(), getEndereco(), getPlanoSaude(), new ArrayList<>());
 
@@ -61,7 +63,7 @@ public class CommonAtendimentoTest {
         return new CommonEndereco("rua teste", "123", "teste", "teste", "teste", "SP");
     }
 
-    private CommonPlanoSaude getPlanoSaude() throws Exception {
+    private br.com.clinicalosacco.app.domain.entities.impl.CommonPlanoSaude getPlanoSaude() throws Exception {
         return new CommonPlanoSaude("teste", "teste", "teste", "teste");
     }
 

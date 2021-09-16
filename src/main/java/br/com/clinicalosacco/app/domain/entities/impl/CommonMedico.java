@@ -58,7 +58,7 @@ public class CommonMedico implements Medico {
 
     private void validar(String nome, String cpf, String rg, String crm, Endereco endereco) throws Exception {
         if(nome == null || nome.isEmpty()){
-            throw new Exception("nome invalida, preencher corretamente");
+            throw new Exception("nome invalido, preencher corretamente");
         }
         if(cpf == null || cpf.isEmpty()){
             throw new Exception("cpf invalido, preencher corretamente");
@@ -67,7 +67,7 @@ public class CommonMedico implements Medico {
             throw new Exception("rg invalido, preencher corretamente");
         }
         if(crm == null || crm.isEmpty()){
-            throw new Exception("complemento invalido, preencher corretamente");
+            throw new Exception("crm invalido, preencher corretamente");
         }
         if(endereco == null){
             throw new Exception("endereco invalido, preencher corretamente");

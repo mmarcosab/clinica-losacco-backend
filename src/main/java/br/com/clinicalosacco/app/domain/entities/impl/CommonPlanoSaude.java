@@ -52,13 +52,13 @@ public class CommonPlanoSaude implements PlanoSaude {
             throw new Exception("tipo invalido, preencher corretamente");
         }
         if(codigoIdentificacao == null || codigoIdentificacao.isEmpty()){
-            throw new Exception("tipo invalido, preencher corretamente");
+            throw new Exception("codigo identificacao invalido, preencher corretamente");
         }
         if(plano == null || plano.isEmpty()){
-            throw new Exception("tipo invalido, preencher corretamente");
+            throw new Exception("plano invalido, preencher corretamente");
         }
         if(cobertura == null || cobertura.isEmpty()){
-            throw new Exception("tipo invalido, preencher corretamente");
+            throw new Exception("cobertura invalida, preencher corretamente");
         }
     }
 

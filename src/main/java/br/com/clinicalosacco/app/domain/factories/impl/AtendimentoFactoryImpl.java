@@ -5,9 +5,11 @@ import br.com.clinicalosacco.app.domain.entities.Medico;
 import br.com.clinicalosacco.app.domain.entities.Paciente;
 import br.com.clinicalosacco.app.domain.entities.impl.CommonAtendimento;
 import br.com.clinicalosacco.app.domain.factories.AtendimentoFactory;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class AtendimentoFactoryImpl implements AtendimentoFactory {
 
     @Override

@@ -3,7 +3,9 @@ package br.com.clinicalosacco.app.domain.factories.impl;
 import br.com.clinicalosacco.app.domain.entities.PlanoSaude;
 import br.com.clinicalosacco.app.domain.entities.impl.CommonPlanoSaude;
 import br.com.clinicalosacco.app.domain.factories.PlanoSaudeFactory;
+import org.springframework.stereotype.Service;
 
+@Service
 public class PlanoSaudeFactoryImpl implements PlanoSaudeFactory {
 
     @Override

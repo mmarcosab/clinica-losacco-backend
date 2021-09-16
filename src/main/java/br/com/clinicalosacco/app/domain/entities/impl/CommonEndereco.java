@@ -48,7 +48,7 @@ public class CommonEndereco implements Endereco {
 
     @Override
     public String getUf() {
-        return null;
+        return this.uf;
     }
 
     @Override

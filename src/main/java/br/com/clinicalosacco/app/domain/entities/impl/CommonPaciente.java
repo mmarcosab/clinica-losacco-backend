@@ -91,10 +91,7 @@ public class CommonPaciente implements Paciente {
             throw new Exception("endereco invalido, preencher corretamente");
         }
         if(planoSaude == null){
-            throw new Exception("plano saude invalido, preencher corretamente");
-        }
-        if(historico == null){
-            throw new Exception("historico invalido, preencher corretamente");
+            throw new Exception("plano de saude invalido, preencher corretamente");
         }
     }
 

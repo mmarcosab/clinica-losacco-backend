@@ -4,7 +4,9 @@ import br.com.clinicalosacco.app.domain.entities.Endereco;
 import br.com.clinicalosacco.app.domain.entities.Medico;
 import br.com.clinicalosacco.app.domain.entities.impl.CommonMedico;
 import br.com.clinicalosacco.app.domain.factories.MedicoFactory;
+import org.springframework.stereotype.Service;
 
+@Service
 public class MedicoFactoryImpl implements MedicoFactory {
 
     @Override

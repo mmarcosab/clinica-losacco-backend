@@ -4,14 +4,19 @@ package br.com.clinicalosacco.app.domain.entities;
 import br.com.clinicalosacco.app.domain.entities.impl.*;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CommonEnderecoTest {
 
     @Test
-    public void testCriarEnderecoComSucesso(){
-        assertDoesNotThrow(() -> new CommonEndereco("teste", "233","sao paulo",  "complemento", "teste bairro", "SP"));
+    public void testCriarEnderecoComSucesso() throws Exception {
+        CommonEndereco e = new CommonEndereco("teste", "233","sao paulo",  "complemento", "teste bairro", "SP");
+        assertEquals("teste", e.getRua());
+        assertEquals("233", e.getNumero());
+        assertEquals("sao paulo", e.getCidade());
+        assertEquals("complemento", e.getComplemento());
+        assertEquals("teste bairro", e.getBairro());
+        assertEquals("SP", e.getUf());
     }
 
     @Test

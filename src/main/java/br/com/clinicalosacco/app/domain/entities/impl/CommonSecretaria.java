@@ -47,6 +47,17 @@ public class CommonSecretaria implements Secretaria {
         return endereco;
     }
 
+    @Override
+    public String toString() {
+        return "CommonSecretaria{" +
+                "nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", rg='" + rg + '\'' +
+                ", dataNascimento=" + dataNascimento +
+                ", endereco=" + endereco +
+                '}';
+    }
+
     private void validar(String nome, String cpf, String rg, LocalDate dataNascimento, Endereco endereco) throws Exception {
         if(nome == null || nome.isEmpty()){
             throw new Exception("nome invalido, preencher corretamente");
@@ -55,7 +66,7 @@ public class CommonSecretaria implements Secretaria {
             throw new Exception("cpf invalido, preencher corretamente");
         }
         if(dataNascimento == null){
-            throw new Exception("data nascimento invalida, preencher corretamente");
+            throw new Exception("data de nascimento invalida, preencher corretamente");
         }
         if(endereco == null){
             throw new Exception("endereco invalido, preencher corretamente");
