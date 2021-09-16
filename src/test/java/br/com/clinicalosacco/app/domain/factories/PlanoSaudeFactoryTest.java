@@ -3,8 +3,6 @@ package br.com.clinicalosacco.app.domain.factories;
 import br.com.clinicalosacco.app.domain.factories.impl.PlanoSaudeFactoryImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 
