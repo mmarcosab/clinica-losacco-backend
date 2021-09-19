@@ -11,4 +11,5 @@ public interface Paciente {
     Endereco getEndereco();
     PlanoSaude getPlanoSaude();
     List<Atendimento> getHistorico();
+    Atendimento criarConsulta(Medico medico, String descricao, List<String> exames, LocalDate data);
 }

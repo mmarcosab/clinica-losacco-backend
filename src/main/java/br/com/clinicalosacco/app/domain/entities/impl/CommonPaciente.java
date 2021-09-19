@@ -1,9 +1,6 @@
 package br.com.clinicalosacco.app.domain.entities.impl;
 
-import br.com.clinicalosacco.app.domain.entities.Atendimento;
-import br.com.clinicalosacco.app.domain.entities.Endereco;
-import br.com.clinicalosacco.app.domain.entities.Paciente;
-import br.com.clinicalosacco.app.domain.entities.PlanoSaude;
+import br.com.clinicalosacco.app.domain.entities.*;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -62,6 +59,12 @@ public class CommonPaciente implements Paciente {
     @Override
     public List<Atendimento> getHistorico() {
         return historico;
+    }
+
+    //TODO - trabalahr na criacao de consultas e melhorar esse relacionamento
+    @Override
+    public Atendimento criarConsulta(Medico medico, String descricao, List<String> exames, LocalDate data) {
+        return null;
     }
 
     @Override

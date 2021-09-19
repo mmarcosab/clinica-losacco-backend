@@ -5,7 +5,6 @@ import br.com.clinicalosacco.app.domain.entities.impl.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 import br.com.clinicalosacco.app.domain.entities.impl.CommonPlanoSaude;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -18,7 +17,7 @@ public class CommonAtendimentoTest {
     public void testCriarAtendimentoComSucesso(){
         List<String> exames = new ArrayList<>();
         exames.add("exame 1");
-        assertDoesNotThrow(() -> new CommonAtendimento("descricao teste", exames, getPaciente(), getMedico()));
+        assertDoesNotThrow(() -> new CommonAtendimento("descricao teste", exames, getMedico()));
     }
 
     @Test
@@ -26,7 +25,7 @@ public class CommonAtendimentoTest {
         List<String> exames = new ArrayList<>();
         exames.add("exame 1");
         try {
-            CommonAtendimento c = new CommonAtendimento("descricao teste", exames, null, getMedico());
+            CommonAtendimento c = new CommonAtendimento("descricao teste", exames, getMedico());
         } catch (Exception e){
             assertEquals("paciente invalido, preencher corretamente", e.getMessage());
         }
@@ -37,7 +36,7 @@ public class CommonAtendimentoTest {
         List<String> exames = new ArrayList<>();
         exames.add("exame 1");
         try {
-            CommonAtendimento c = new CommonAtendimento("descricao teste", exames, getPaciente(), null);
+            CommonAtendimento c = new CommonAtendimento("descricao teste", exames, null);
         } catch (Exception e){
             assertEquals("medico invalido, preencher corretamente", e.getMessage());
         }
@@ -48,7 +47,7 @@ public class CommonAtendimentoTest {
         List<String> exames = new ArrayList<>();
         exames.add("exame 1");
         try {
-            CommonAtendimento c = new CommonAtendimento("", exames, null, getMedico());
+            CommonAtendimento c = new CommonAtendimento("", exames, getMedico());
         } catch (Exception e){
             assertEquals("descricao invalida, preencher corretamente", e.getMessage());
         }
