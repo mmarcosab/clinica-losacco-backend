@@ -26,7 +26,7 @@ public class AtendimentoFactoryTest {
     public void testCriarAtendimentoComSucesso() throws Exception {
         List<String> exames = new ArrayList<>();
         exames.add("exame 1");
-        assertDoesNotThrow(() -> factory.create("descricao teste", exames, getPaciente(), getMedico()));
+        assertDoesNotThrow(() -> factory.create("descricao teste", exames, getMedico()));
     }
 
 
