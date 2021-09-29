@@ -2,7 +2,6 @@ package br.com.clinicalosacco.app.adapters.database.entities;
 
 import lombok.Builder;
 import lombok.Getter;
-
 import javax.persistence.*;
 
 @Builder

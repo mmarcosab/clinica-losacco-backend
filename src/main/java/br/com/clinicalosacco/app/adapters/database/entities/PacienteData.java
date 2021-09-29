@@ -1,14 +1,9 @@
 package br.com.clinicalosacco.app.adapters.database.entities;
 
-import br.com.clinicalosacco.app.domain.entities.Atendimento;
-import br.com.clinicalosacco.app.domain.entities.Endereco;
-import br.com.clinicalosacco.app.domain.entities.PlanoSaude;
 import lombok.Builder;
 import lombok.Getter;
-
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.List;
 
 @Getter
 @Builder
