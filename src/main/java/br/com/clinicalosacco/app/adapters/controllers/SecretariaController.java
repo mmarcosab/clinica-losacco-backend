@@ -24,22 +24,22 @@ public class SecretariaController {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.criar(request));
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     public ResponseEntity<?> update(@PathVariable Integer id, @RequestBody SecretariaRequest request){
         return ResponseEntity.ok(service.atualizar(id, request));
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable Integer id){
         return ResponseEntity.ok(service.deletar(id));
     }
 
-    @GetMapping
+    @GetMapping("/{id}")
     public ResponseEntity<?> findById(@PathVariable Integer id){
         return ResponseEntity.ok(service.buscarPorId(id));
     }
 
-    @GetMapping
+    @GetMapping("/{nome}")
     public ResponseEntity<?> findByName(@PathVariable String nome){
         return ResponseEntity.ok(service.buscarPorNome(nome));
     }
