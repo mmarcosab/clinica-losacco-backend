@@ -11,6 +11,8 @@ import java.util.List;
 @Service
 public class PacienteJpa implements PacienteService {
 
+    //TODO implementar os metodos
+
     @Override
     public List<PacienteResponse> listar() {
         return null;
