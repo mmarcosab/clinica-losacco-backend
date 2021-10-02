@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.Getter;
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Getter
 @Builder
@@ -34,5 +35,9 @@ public class PacienteData {
     @OneToOne
     @Embedded
     private PlanoSaudeData planoSaude;
+
+    @OneToMany
+    @Embedded
+    private List<AtendimentoData> historico;
 
 }
